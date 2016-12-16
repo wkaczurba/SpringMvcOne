@@ -10,7 +10,7 @@ import com.User;
 import com.data.UserRepository;
 import com.web.MainController;
 
-import static org.junit.Assert.*;
+//import static org.junit.Assert.*;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -109,7 +109,7 @@ public class MainControllerTest {
 				.param("userName", "THREE")
 				.param("password", "FOUR")
 		        .param("email", "FIVE@EMAIL.COM"))
-			.andExpect(redirectedUrl("user/THREE"));
+			.andExpect(redirectedUrl("/user/THREE"));
 				
 		verify(mockRepo, atLeastOnce()).saveUser(unsaved);
 	}

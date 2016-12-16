@@ -11,10 +11,15 @@ import com.data.UserRepository;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 
 // TOOD: Add a repository + contents for storing. 
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
+
+import java.util.stream.Collectors;
+
+import javax.validation.Valid;
 
 @Controller
 public class MainController {
@@ -72,7 +77,13 @@ public class MainController {
 	}
 	
 	@RequestMapping(value="/forms", method=POST)
-	public String processForm(User user) {
+	public String processForm(@Valid User user, Errors errors) {
+		if (errors.hasErrors()) {
+			// TODO: Add some more details why it failed...
+			System.out.println("COuld not register..." + errors.getAllErrors().stream().map(x->x.toString()).collect(Collectors.joining(",")));
+			return "forms";
+		}
+		
 		System.out.println("Registered: " + user.getFirstName() + user.getUserName() + user.getLastName());
 		
 		userRepository.saveUser(user);

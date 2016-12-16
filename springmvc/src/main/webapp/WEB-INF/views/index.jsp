@@ -13,10 +13,10 @@
 <p>
 <ul>
   <li><a href="subpage">subpage</a></li>
-  <li><a href="argsdemo1?first_int=3&some_string=aasf">passing arguments1: ?first_int=3&some_string=aasf</a>
+  <li><a href="argsdemo1?first_int=3&some_string=aasf">passing arguments1: ?first_int=3&amp;some_string=aasf</a>
   <li><a href="aspath/get/23/44">passing arguments as path: get/23/44</a>
   <li><a href="forms">forms - <b>TODO!!</b></a>
 </ul>
-</p>
+
 </body>
 </html>

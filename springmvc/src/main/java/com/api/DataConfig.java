@@ -1,18 +1,13 @@
 package com.api;
 
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import java.sql.SQLException;
-
 import javax.sql.DataSource;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.context.annotation.Configuration;
-import org.h2.tools.Server;
+//import org.h2.tools.Server;
 import org.springframework.context.annotation.Bean;
-
-//import org.springframework.
 
 @Configuration
 public class DataConfig {

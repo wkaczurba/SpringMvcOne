@@ -27,6 +27,11 @@
     <finalName>springone</finalName>
   </build>  
   <dependencies>
+    <dependency>
+       <groupId>junit</groupId>    
+       <artifactId>junit</artifactId>
+       <version>4.12</version>
+    </dependency>
   	<dependency>
   		<groupId>org.springframework</groupId>
   		<artifactId>spring-context</artifactId>
@@ -57,5 +62,36 @@
     	<artifactId>commons-logging</artifactId>
     	<version>1.2</version>
 	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-test</artifactId>
+  		<version>4.3.4.RELEASE</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.commons</groupId>
+  		<artifactId>commons-lang3</artifactId>
+  		<version>3.5</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>jstl</groupId>
+  		<artifactId>jstl</artifactId>
+  		<version>1.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.mockito</groupId>
+  		<artifactId>mockito-core</artifactId>
+  		<version>2.3.5</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-jdbc</artifactId>
+  		<version>4.3.4.RELEASE</version>
+  	</dependency>
+  	<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+	<dependency>
+	    <groupId>com.h2database</groupId>
+	    <artifactId>h2</artifactId>
+	    <version>1.4.193</version>
+	</dependency>  	
   </dependencies>
 </project>
